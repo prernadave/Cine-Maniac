@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #2d2d2d;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* scrollbar for bottom */
+
+body::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(169, 169, 169);
+    border-radius: 0.5rem;
+}
+
+.navigation {
+    width: 100%;
+    height: 3.25rem;
+    background: black;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+}
+
+.nav_data {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.25rem;
+}
+
+#main-logo {
+    height: 20px;
+    width: 53px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+}
+
+.signin {
+    background: #0a84ff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pop-up-box {
+    position: fixed;
+    z-index: 200;
+    display: none;
+    top: 12%;
+    left: 25%;
+    background: #333333;
+    border-radius: 1rem;
+    height: 80vh;
+    width: 50vw;
+    margin: auto;
+    overflow: hidden;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.crossBtn {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.close-Btn {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    border: none;
+    filter: invert(100%) contrast(50%);
+    background: url("https://tv.apple.com/static-commerce/img/close.d279866e.svg");
+}

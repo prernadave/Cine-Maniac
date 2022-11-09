@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine-Maniac</title>
+    <link rel="icon" href="images/Cine-MAniac.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css/home.css">
+</head>
+
+<body>
+    <div class="backdrop"></div>
+    <!-- modal -->
+    <div class="pop-up-box">
+
+        <!--for closing  -->
+        <div class="crossBtn">
+            <button aria-label="close" class="close-Btn"></button>
+        </div>
+
+        <div class="popup-page">
+            <iframe src="" width="100%" height="100%" title="Sign In" id="popup-iframe"></iframe>
+        </div>
+    </div>
+    <!-- nav-bar -->
+    <header>
+        <nav class="navigation">
+            <div class="nav-data">
+                <a href="/" id="main-logo"></a>
+                <button class="signin">
+                    <i class="fa-solid fa-user fa-sm"></i>Sign In
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="top">
+            <div class="epic-stage__content typography-title-3">
+                <picture class="epic-stage__bg">
+                    <source
+                        srcset="https://is1-ssl.mzstatic.com/image/thumb/Features122/v4/69/8f/f7/698ff77b-ea57-ea5e-b8ef-e3d4fe294c6a/6d3547c1-622e-41be-8fd2-b2974549ec6a.png/739x1312sr.jpg 1x, https://is1-ssl.mzstatic.com/image/thumb/Features122/v4/69/8f/f7/698ff77b-ea57-ea5e-b8ef-e3d4fe294c6a/6d3547c1-622e-41be-8fd2-b2974549ec6a.png/1478x2624sr.jpg 2x"
+                        media="(max-width:739px)" type="image/jpeg">
+                    <source
+                        srcset="https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/999x562sr.jpg 1x, https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/1998x1124sr.jpg 2x"
+                        media="(min-width:740px) and (max-width:999px)" type="image/jpeg">
+                    <source
+                        srcset="https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/1319x742sr.jpg 1x, https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/2638x1484sr.jpg 2x"
+                        media="(min-width:1000px) and (max-width:1319px)" type="image/jpeg">
+                    <source
+                        srcset="https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/1679x945sr.jpg 1x, https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/bb/2c/ae/bb2cae80-b4e9-7193-8a4f-fb1129ad59ca/278c3382-c095-47b3-ba19-d82887d8b13a.png/3358x1889sr.jpg 2x"
+                        media="(min-width:1320px)" type="image/jpeg">
+                    <img alt class="landing__main__section__img landing__main__section__img--override" loading="eager"
+                        width="1679" height="944.4375" role="presentation">
+                </picture>
+            </div>
+            <div class="top-content">
+                <h1>The Home of
+                    Cine-Maniac Originals</h1>
+                <span>Enjoy star-studded, award-winning
+                    series, films, and more</span>
+                <div><button>Start Free Trial</button></div>
+                <h6>7 days free, then $6.99/month.</h6>
+                <a href="#latestOrginal" id="jumbotron-arrow"><i class="fa-solid fa-angle-down fa-lg"></i></a>
+            </div>
+
+        </div>
+
+        <!-- entireSeason -->
+
+        <section id="entireSeason" class="content">
+            <h3>Watch Entire Seasons</h3>
+
+            <!-- webseries container -->
+
+            <div class="glider-container">
+
+                <div class="glider"> </div>
+
+                <!-- buttons -->
+
+                <!-- for previous -->
+
+                <button aria-label="Previous" class="glid-prv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+
+                </button>
+
+                <!-- for next -->
+
+                <button aria-label="Next" class="glider-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="grey"
+                        class="bi bi-chevron-right bottom5" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- section latest originals -->
+        <section id="latestOriginal" class="content">
+
+            <h3>Latest Originals</h3>
+            <div class="glider-container">
+
+                <div class="glider"></div>
+
+                <!-- buttons previous -->
+                <button aria-label="Previous" class="glid-prv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+
+                </button>
+
+                <!-- button next -->
+                <button aria-label="Next" class="glider-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="grey"
+                        class="bi bi-chevron-right bottom5" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- coming soon -->
+
+        <section id="comingSoon" class="content">
+
+            <!-- heading -->
+
+            <h3>Future Releases</h3>
+            <p>Add to Your Up Next Now.</p>
+
+            <!-- coming soon container -->
+
+            <div class="glider-conatiner">
+                <div class="glider">
+                    <!-- buttons previous -->
+                    <button aria-label="Previous" class="glid-prv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+
+                    </button>
+
+                    <!-- button next -->
+                    <button aria-label="Next" class="glider-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="grey"
+                            class="bi bi-chevron-right bottom5" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <div id="device_information">
+            <div class="devices-info">
+                <div class="tv-logo">
+                    <img src="images/Cine-MAniac.png" alt="">
+                </div>
+
+                <h1>Watch Cine-Maniac here or anywhere</h1>
+                <h3>
+                    Find Cine-Maniac on the Cine-Maniac app, available on Apple Devices, Andriod Devices,
+                    smart TVs, and more.
+                </h3>
+
+                <p class="support link">
+                    <a href="support-link.html">See all supported
+                        devices ></a>
+                </p>
+
+                <div class="devices">
+                    <div class="device">
+                        <img src="" alt="">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>
