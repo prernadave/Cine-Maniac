@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d591cda822.js" crossorigin="anonymous"></script>
+    <title>Sign In</title>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #2f2f2f;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body::-webkit-scrollbar {
+        width: 0.3rem;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgb(169, 169, 169);
+        border-radius: 0.5rem;
+    }
+
+    #signup-container {
+        padding-top: 3rem;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+
+    .signin-logo {
+        position: absolute;
+        top: 45%;
+        right: 3%;
+        height: 1.5rem;
+        width: 1.5rem;
+        filter: invert(40%);
+        cursor: pointer;
+    }
+
+    .signin-logo:hover {
+        filter: invert(100%);
+    }
+
+    /* .logo {
+        color: #cccccc;
+    } */
+
+    .logo {
+        color: #cccccc;
+        text-align: center;
+    }
+
+    .logoimg {
+        width: 20%;
+
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: #f5f5f7;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.05rem;
+        color: #f5f5f7;
+    }
+
+    .input {
+        position: relative;
+    }
+
+    .cine-id {
+        background-color: black;
+        border-radius: 2%;
+        font-size: 1rem;
+        width: 21rem;
+        margin-top: 1.2rem;
+        padding: 0.8rem 2.6rem 0.8rem 1rem;
+        color: #f5f5f7;
+        border: 2px solid #494949;
+        transition: 0.2s ease-in;
+    }
+
+    .cine-id:hover {
+        border: 2px solid #409cff;
+    }
+
+    .cine-id input::-webkit-input-placeholder {
+        transition: 0.2s ease-in;
+        color: #494949;
+        opacity: 1;
+    }
+
+    .cine-id input:focus::-webkit-input-placeholder {
+        opacity: 0;
+        transition: 0.2s ease-out;
+    }
+
+    .links {
+        margin-top: 6rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #409cff;
+        display: block;
+        margin: 1.5rem 0;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="container" id="signup-container">
+
+            <div class="logo">
+                <img class="logoimg" src="https://i.ibb.co/HB47Mzc/Cine-Maniac-1-removebg-preview.png" alt="">
+            </div>
+
+            <h3>Sign in with your Cine-Maniac TV and Cine-Maniac Music</h3>
+            <p>You will be signed in to Cine-Maniac TV and Cine-Maniac Music</p>
+
+            <div class="input">
+                <input type="text" name="Cine-ID" id="inputid" class="cine-id" placeholder="Cine ID">
+                <img class="signin-logo" src="images/arrow-right-solid.jpg" alt="">
+            </div>
+            <div class="links">
+                <a href="privacy.html">Create New Cine ID</a>
+                <a href="forgot-pass.html">Forgot Cine ID or Password</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="Scripts/sign-in.js"></script>
+
+</body>
+
+</html>

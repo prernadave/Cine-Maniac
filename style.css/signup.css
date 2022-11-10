@@ -1,0 +1,9 @@
+.signin-logo {
+    position: absolute;
+    top: 45%;
+    right: 3%;
+    height: 1.5rem;
+    width: 10%;
+    filter: invert(40%);
+    cursor: pointer;
+}
