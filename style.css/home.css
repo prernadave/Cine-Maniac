@@ -65,6 +65,8 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
 }
 
+/* advertisement */
+
 .advertisement {
     position: fixed;
     width: 100vw;
@@ -142,6 +144,9 @@ body::-webkit-scrollbar-thumb {
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.5);
 }
+
+
+
 
 .backdrop {
     position: fixed;

@@ -1,4 +1,4 @@
-var SigninData = JSON.parse(localStorage.getItem("signinData")) || [];
+var signInData = JSON.parse(localStorage.getItem("signInData")) || [];
 var user = localStorage.getItem("user");
 
 var parentDocument = window.parent.document;
@@ -13,7 +13,7 @@ var signBtn = parentDocument.querySelector(".signin");
 var signBtnText = parentDocument.querySelector("#signin-btn-text");
 var topBtn = parentDocument.querySelector(".top-button")
 var info = parentDocument.querySelector(".info")
-var iframe = parentDocument.querySelector("#popup-iframe")
+var popUpFrame = parentDocument.querySelector("#popup-iframe")
 
 var passwordInp = document.querySelector("#password");
 var passSubmit = document.querySelector("#passSubmit");
@@ -33,8 +33,8 @@ function close() {
 
 passSubmit.addEventListener("click", function () {
     var flag = false;
-    for (var i = 0; i < signinData.length; i++) {
-        if (signinData[i].pass == passwordInp) {
+    for (var i = 0; i < signInData.length; i++) {
+        if (signInData[i].pass == passwordInp) {
             flag = true;
             break;
         }
@@ -50,7 +50,30 @@ passSubmit.addEventListener("click", function () {
         signBtn.setAttribute("id", "signout");
         signBtnText.innerHTML = '<i class="fa-solid fa-user fa-sm"></i>&nbsp&nbsp' + person;
 
-        var signOutBtn = parentDocument.querySelector("#signout")
+        var signOutBtn = parentDocument.querySelector("#sign-out_btn");
+        signOutBtn.addEventListener("mouseenter", function () {
+            signBtnText.innerHTML =
+                '<i class="fa-solid fa-arrow-right-from-bracket"></i>&nbspSign Out';
+        });
+
+        signOutBtn.addEventListener("mouseleave", function () {
+            signBtnText.innerHTML =
+                '<i class="fa-solid fa-user fa-sm"></i>&nbsp&nbsp' + person;
+        });
+
+        signOutBtn.addEventListener("mousedown", () => {
+            advert.style.display = "";
+            topBtn.style.display = "block";
+            info.forEach(function (el) {
+                el.style.display = "block";
+            });
+            signBtn.removeAttribute("id", "sign-out_btn");
+            signBtn.classList.add("class", "sign-in_btn");
+            popUpFrame.src = "sign-in.html";
+            localStorage.removeItem("person");
+            signBtnText.innerHTML =
+                '<i class="fa-solid fa-user fa-sm"></i>&nbspSign In';
+        });
     }
 
-})
+});
