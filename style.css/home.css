@@ -29,9 +29,12 @@ body::-webkit-scrollbar-thumb {
     z-index: 50;
     top: 0;
     left: 0;
+    /* display: flex; */
+
+
 }
 
-.nav_data {
+.nav-data {
     width: 95%;
     margin: auto;
     display: flex;
@@ -41,13 +44,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 #main-logo {
-    height: 20px;
-    width: 53px;
-    background-image: url();
+    height: 100px;
+    width: 60px;
+    background-image: url(https://i.ibb.co/HB47Mzc/Cine-Maniac-1-removebg-preview.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     display: block;
+    filter: brightness(200%);
+
 }
 
 .signin {
@@ -57,6 +62,85 @@ body::-webkit-scrollbar-thumb {
     border: none;
     border-radius: 0.4rem;
     font-size: 0.8rem;
+    text-align: left;
+}
+
+.advertisement {
+    position: fixed;
+    width: 100vw;
+    height: 6.25rem;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #262629;
+    z-index: 10;
+    user-select: none;
+}
+
+.hide {
+    opacity: 0;
+    bottom: -100%;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    bottom: 0;
+    transition: all 1s;
+}
+
+.adv-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.adv-details a {
+    color: #0a84ff;
+    text-decoration: none;
+}
+
+.adv-heading {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0.4rem 0;
+}
+
+.adv-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.cta-btn {
+    cursor: pointer;
+    font-size: 0.82rem;
+    width: 8rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.88);
+    padding: 0.5rem 1rem;
+    background: white;
+    box-shadow: rgb(0 0 0 / 6%) 0 0 20px;
+    margin: 1rem 0 0.1rem 0;
+}
+
+.cta-desc {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .backdrop {
@@ -101,4 +185,186 @@ body::-webkit-scrollbar-thumb {
     border: none;
     filter: invert(100%) contrast(50%);
     background: url("https://tv.apple.com/static-commerce/img/close.d279866e.svg");
+}
+
+.popup-page {
+    height: 100%;
+}
+
+.popup-page iframe {
+    border: none;
+}
+
+.top {
+    /* height: 850px; */
+    /* position: relative; */
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 0.7) 30%,
+            rgba(255, 255, 255, 0) 60%);
+}
+
+.top-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    color: white;
+    margin-bottom: 20%;
+}
+
+.main-heading {
+    font-size: 2rem;
+    margin-bottom: 1%;
+    font-weight: 700;
+    user-select: none;
+}
+
+.sub-heading {
+
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.top-button {
+
+    color: #000;
+    background: white;
+    font-size: 1rem;
+    font-weight: 550;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.info {
+    color: #6e6e73;
+    font-weight: 500;
+    margin: 0.3rem 0;
+    user-select: none;
+}
+
+.top a {
+    text-decoration: none;
+    color: #409cff;
+}
+
+#top-arrow {
+    color: white;
+    padding: 1rem 0;
+}
+
+#device_information {
+    width: 100%;
+    margin-top: 4rem;
+    background: black;
+    display: flex;
+    justify-content: center;
+}
+
+.devices-info {
+    width: 50%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    word-break: break-word;
+}
+
+.tv-logo {
+    width: 65px;
+    height: 65px;
+}
+
+.tv-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.devices {
+    margin: 0.8rem 0;
+    display: grid;
+    grid-template: 6.75rem / repeat(5, 1fr);
+    column-gap: 0.5rem;
+}
+
+.device img {
+    width: 70%;
+    object-fit: cover;
+}
+
+.compt-devices {
+    margin: 1rem 0;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    column-gap: 4rem;
+}
+
+.compt-devices img {
+    width: 80%;
+    object-fit: cover;
+}
+
+
+
+.dev-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.avail {
+    font-size: 0.7rem;
+    user-select: none;
+}
+
+#footer {
+    width: 100%;
+
+}
+
+.main-footer {
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.main-footer .copy {
+    color: rgba(255, 255, 255, 0.6);
+    user-select: none;
+}
+
+
+.main-footer-info-nav {
+    display: flex;
+    align-items: center;
+}
+
+.footer-info-items {
+    margin: 0.8rem 0.5rem 0.8rem 0;
+    padding: 0 0.5rem 0 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#footer-support-info {
+    border-right: none;
 }
