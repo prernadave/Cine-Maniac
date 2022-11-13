@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch shows</title>
+    <link rel="stylesheet" href="data.js">
+</head>
+<style>
+    .playback {
+        height: 600px;
+        margin: 2rem 0;
+        position: relative;
+        background: radial-gradient(ellipse farthest-corner at top right,
+                transparent 50%,
+                #000);
+    }
+
+    .playback video {
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .playback-content {
+        width: 98%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 0.2rem;
+    }
+
+    .playback-content_text {
+        width: 35%;
+        padding: 3rem 1.5rem;
+        text-align: left;
+        user-select: none;
+    }
+
+    .playback-heading {
+        color: white;
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+        word-wrap: break-word;
+        user-select: none;
+    }
+
+    .playback-category,
+    .playback-info {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        user-select: none;
+    }
+
+    .playback-category {
+        font-size: 0.9rem;
+        user-select: none;
+    }
+
+    .mainDiv p {
+        margin: 0.2rem 0;
+        color: #f4f4ff;
+        font-weight: 500;
+    }
+
+    #videoDiv .glider-next,
+    #videoDiv .glider-prev {
+        top: 20%;
+    }
+
+    .navigation {
+        width: 100%;
+        height: 3.25rem;
+        background: black;
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        /* display: flex; */
+
+
+    }
+
+    .nav-data {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3.25rem;
+    }
+
+    #main-logo {
+        height: 100px;
+        width: 60px;
+        background-image: url(https://i.ibb.co/HB47Mzc/Cine-Maniac-1-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: block;
+        filter: brightness(200%);
+
+    }
+
+    .signin {
+        background: #0a84ff;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 0.4rem;
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    h3 {
+        margin-top: 5%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #2d2d2d;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+</style>
+
+<body>
+    <nav class="navigation">
+
+        <!-- nav-content -->
+        <div class="nav-data">
+
+            <!-- logo and search bar -->
+
+            <a href="home.html" id="main-logo"></a>
+            <a href="search.html"><input type="text" value="Search"
+                    style="padding:10px;background-color:aliceblue ;color: black;border-radius:10px;border:1px solid white ">
+            </a>
+
+            <!-- signin button -->
+
+            <button class="signin">
+                <p id="signin-btn-text"> <i class="fa-solid fa-user fa-sm"></i>Sign In
+                </p>
+            </button>
+
+        </div>
+    </nav>
+    <div class="playback">
+
+        <video width="100%" height="100%" muted loop preload="metadata" autoplay src="/videos/morning.mp4"></video>
+
+        <div class="playback-content">
+
+            <div class="playback-content_text">
+
+                <p class="playback-category">DRAMA</p>
+
+                <p class="playback-heading">
+
+                    Immerse Yourself in the Extraordinary
+                </p>
+                <p class="playback-info">
+
+                    Discover series and films that will take you places you never
+                    imagined.
+                </p>
+
+            </div>
+
+            <div class="playback-slider">
+
+                <section id="videoDiv" class="cont">
+
+                    <div class="glider-contain">
+
+                        <div class="glider"></div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <!-- video div ended -->
+        <h1 style="color: blue;"> Watch The Morning Show</h1>
+
+</body>
+
+</html>
+<script src="dickinson.js"></script>
