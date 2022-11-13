@@ -1,5 +1,5 @@
 var signInData = JSON.parse(localStorage.getItem("signInData")) || [];
-var user = localStorage.getItem("user");
+var user = localStorage.getItem("person");
 
 var parentDocument = window.parent.document;
 var body = parentDocument.querySelector("body");
@@ -16,7 +16,7 @@ var info = parentDocument.querySelector(".info")
 var popUpFrame = parentDocument.querySelector("#popup-iframe")
 
 var passwordInp = document.querySelector("#password");
-var passSubmit = document.querySelector("#passSubmit");
+var submitpass = document.querySelector("#passSubmit");
 
 function open() {
     backdrop.style.display = "block"
@@ -31,7 +31,7 @@ function close() {
     body.style.overflow = "auto"
 }
 
-passSubmit.addEventListener("click", function () {
+submitpass.addEventListener("click", function () {
     var flag = false;
     for (var i = 0; i < signInData.length; i++) {
         if (signInData[i].pass == passwordInp) {
