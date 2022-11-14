@@ -7,14 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>movie</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #2d2d2d;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        /* scrollbar for bottom */
+
+        body::-webkit-scrollbar {
+            width: 0.3rem;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(169, 169, 169);
+            border-radius: 0.5rem;
+        }
+
         #container {
             /* margin-top: 5%; */
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
             gap: 40px;
             padding-bottom: 40px;
-            background-color: black;
+            margin-top: 6%;
+
         }
 
         #container>div>img {
@@ -26,7 +50,7 @@
 
         #container>div {
             text-align: center;
-            box-shadow: 9px 10px 9px grey;
+            box-shadow: rgba(175, 173, 173, 0.16) 0px 1px 4px, rgb(147, 146, 146) 0px 0px 0px 3px;
         }
 
         button {
@@ -63,15 +87,89 @@
             width: 300px;
 
         }
+
+        .navigation {
+            width: 100%;
+            height: 3.70rem;
+            background: black;
+            position: fixed;
+            z-index: 50;
+            top: 0;
+            left: 0;
+            /* display: flex; */
+
+
+        }
+
+        .nav-data {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3.25rem;
+        }
+
+        #main-logo {
+            height: 100px;
+            width: 60px;
+            background-image: url(https://i.ibb.co/HB47Mzc/Cine-Maniac-1-removebg-preview.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: block;
+            filter: brightness(200%);
+
+        }
+
+        .signin {
+            background: #0a84ff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 0.4rem;
+            font-size: 0.8rem;
+            text-align: left;
+        }
     </style>
 </head>
 
 <body>
-    <button> search
+    <nav class="navigation">
+
+        <!-- nav-content -->
+        <div class="nav-data">
+
+            <!-- logo and search bar -->
+
+            <a href="home.html" id="main-logo"></a>
+            <button> search
+
+            </button>
+
+            <input oninput="search()" type="text" placeholder="movies">
+            <!-- <a href="search.html"><input type="text" value="Search"
+                    style="padding:10px;background-color:aliceblue ;color: black;border-radius:10px;border:1px solid white ">
+            </a>
+            <a href="/find.html">
+                <input style="padding:7px;border-radius:10px;border: 2px solid white" type="text"
+                    placeholder="find our movies"></a> -->
+
+            <!-- signin button -->
+
+            <button style="background-color:blue ; height: auto;" class="signin">
+                <p style="color:white; background-color: blue;" id="signin-btn-text"> <i
+                        class="fa-solid fa-user fa-sm"></i>Sign In
+                </p>
+            </button>
+
+        </div>
+    </nav>
+    <!-- <button> search
 
     </button>
 
-    <input oninput="search()" type="text" placeholder="movies">
+    <input oninput="search()" type="text" placeholder="movies"> -->
 
     <div id="container"></div>
 
@@ -97,7 +195,7 @@
 
     function search() {
         var search = document.querySelector('input').value;
-        var newSearch = ayushi.filter(function (element) {
+        var newSearch = prerna.filter(function (element) {
             return element.Title.toLowerCase().includes(search.toLowerCase())
 
 

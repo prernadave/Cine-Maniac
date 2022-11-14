@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scrollbar-shadow-color: grey;
+        }
+
+        #container {
+            /* margin-top: 5%; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 40px;
+            padding-bottom: 40px;
+            background-color: black;
+        }
+
+        #container>div>img {
+            width: 40%;
+
+
+
+        }
+
+        #container>div {
+            text-align: center;
+            box-shadow: 9px 10px 9px grey;
+        }
+
+        button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        @media (max-width:700px) {
+            #container {
+                /* display: grid; */
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width:399px) {
+            #container {
+                /* display: grid; */
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+
+
+        }
+
+
+        input {
+            padding: 10px 20px;
+            width: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button> search
+
+    </button>
+    <button id="find"> find
+
+    </button>
+
+    <input style="background-color:grey ;" oninput="search()" type="text" id="moviename" placeholder="movies">
+
+    <div id="container"></div>
+
+</body>
+
+</html>
+<script>
+
+    var ayushi = [];
+    document.querySelector('#find').addEventListener('click', () => {
+        let moviename = document.querySelector('#moviename').value
+        console.log(moviename)
+        //let url="https://www.omdbapi.com/?apikey=7fd2edd0&s="+moviename;
+        let url = `https://www.omdbapi.com/?apikey=7fd2edd0&s=.${moviename}`
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+
+                let newData = data["Search"];
+                console.log(newData);
+                ayushi = newData
+
+                displayCard(newData);
+            })
+
+    })
+
+
+    function search() {
+        var search = document.querySelector('input').value;
+        var newSearch = ayushi.filter(function (element) {
+            return element.Title.toLowerCase().includes(search.toLowerCase())
+
+
+        })
+        displayCard(newSearch)
+    }
+
+    function displayCard(newData) {
+        document.querySelector("#container").innerHTML = "";
+        newData.forEach((element) => {
+            var div = document.createElement('div')
+
+            var imagePro = document.createElement('img')
+            imagePro.setAttribute("src", element.Poster)
+
+            let title = document.createElement("h3");
+            title.innerText = element.Title;
+
+            let year = document.createElement('h3')
+            year.innerText = element.Year
+
+
+
+            div.append(imagePro, title, year)
+            document.querySelector("#container").append(div)
+        });
+    }
+</script>
